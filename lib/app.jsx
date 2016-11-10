@@ -17,26 +17,19 @@ class Application extends Component {
   }
 
   componentDidMount() {
-    const names =
-  	  ['Armen', 'Rouben', 'Edgar',
-  	   'Hasmik', 'Karen', 'Suren',
-  	   'Eduard', 'Erik', 'Diana',
-  	   'Svetlana', 'Arman', 'Armine',
-  	   'Emma', 'Hagop',
-  	   'Vianka', 'Ani', 'Viy', 'Mark',
-       'Kalipso', 'Robert', 'Lilith', 'Martin', 'Davit', 'Areg'];
-      const sectors =
-  	  ['Real estate', 'Services', 'Medical',
-  	   'Education', 'Transport', 'Banking'];
-      const spot = max => Math.floor(Math.random() * max);
+    const patient = 'patient';
+    const hospitals = ['Shengavit Medical Center', 'Hanrapetakan Hospital',
+                      'SlavMed Medical Center', 'Izmirlian Medical Center'];
+    const spot = max => Math.floor(Math.random() * max);
+
       setInterval(() => {
         const newTrans = {
-          patient_id: names[spot(names.length)],
-          bed_id: names[spot(names.length)],
-          machine_id: `0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-          doctor_id: `${spot(3000000)} AMD`,
-          hospital: sectors[spot(sectors.length)],
-          payment: sectors[spot(sectors.length)],
+          patient_id: `Patient 0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          bed_id: `Bed 0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          machine_id: `Machine 0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          doctor_id: `Doctor 0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          hospital: hospitals[spot(hospitals.length)],
+          payment: `${Math.floor(Math.random() * 100000)} AMD`,
         };
         this.setState({...this.state,
           trans:[...this.state.trans, newTrans],
