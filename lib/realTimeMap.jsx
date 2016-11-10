@@ -45,7 +45,7 @@ class RealTimeMap extends Component {
     const graphStyle = {
       marginRight: '2vw',
       opacity: '.8',
-      width:'47%',  fontSize: '18px',
+      width:'37%',  fontSize: '15px',
         marginTop:'30vh',
         alignSelf: 'flex-start',
         backgroundColor: 'white',
