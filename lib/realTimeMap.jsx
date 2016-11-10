@@ -52,7 +52,7 @@ class RealTimeMap extends Component {
         height:'60vh',
         borderRadius: '20px',
         display: 'inline-block',
-            background: 'linear-gradient(to right,rgb(224, 251, 159), #181a33)',
+            background: 'linear-gradient(to right,rgb(239, 232, 185), #181a33)',
     };
 
     const parent = {
