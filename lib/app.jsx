@@ -79,11 +79,11 @@ class Application extends Component {
         display: 'inline-block',
         overflowY: 'scroll',
         scrollSpeed: 'slow',
-        background: 'linear-gradient(to right, #c7bfec, #73baaf)',
+        background: 'linear-gradient(to right, #6E6D74, #607899)',
       },
       stylee: {
         display: 'flex',
-        background: 'linear-gradient(to right, #000000, #28287A)',
+        background: 'linear-gradient(to right, #6E6D74, #607899)',
         scrollBehavior: 'smooth',
         transition: 'ease-in 2s',
         animationName: 'anim',
@@ -92,7 +92,7 @@ class Application extends Component {
         width: '100%',
       },
       styleFirst: {
-        backgroundColor: '#426871',
+        backgroundColor: '#6E6D74',
         display: 'flex',
         width: '54%',
         position: 'absolute',
