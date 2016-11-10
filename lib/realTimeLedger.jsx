@@ -43,19 +43,19 @@ class RealTimeLedger extends Component {
       <div ref={'transaction_container'} style={this.props.myStyle.container}>
         <div style={this.props.myStyle.styleFirst}>
           <li style={this.props.myStyle.list_items}>
-            Buyer
+            Patient ID
           </li>
           <li style={this.props.myStyle.list_items}>
-            Seller
+            Bed ID
           </li>
           <li style={this.props.myStyle.list_items}>
-	    Blockchain ID
+	           Machine ID
           </li>
           <li style={this.props.myStyle.list_items}>
-            Price
+            Doctor ID
           </li>
           <li style={this.props.myStyle.list_items}>
-	    Sector
+            Hospital
           </li>
         </div>
         {TransactionFullList}
