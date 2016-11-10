@@ -45,14 +45,14 @@ class RealTimeMap extends Component {
     const graphStyle = {
       marginRight: '2vw',
       opacity: '.8',
-      marginTop:'15vh',
-      minWidth:'40vw',
-      height:'80vh',
-      width: '40vw',
-      backgroundColor:'black',
-      borderRadius: '20px',
-      paddingLeft: '2vw',
-      background: 'linear-gradient(to right,rgb(224, 251, 159), #181a33)',
+      width:'47%',  fontSize: '18px',
+        marginTop:'30vh',
+        alignSelf: 'flex-start',
+        backgroundColor: 'white',
+        height:'60vh',
+        borderRadius: '20px',
+        display: 'inline-block',
+            background: 'linear-gradient(to right,rgb(224, 251, 159), #181a33)',
     };
 
     const parent = {
