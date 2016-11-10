@@ -21,22 +21,22 @@ class RealTimeLedger extends Component {
       return (
         <div key={idx} style={this.props.myStyle.stylee}>
           <li style={this.props.myStyle.list_items}>
-            {tran.buyer}
+            {tran.patient_id}
           </li>
           <li style={this.props.myStyle.list_items}>
-            {tran.seller}
+            {tran.bed_id}
           </li>
           <li style={this.props.myStyle.list_items}>
-            {tran.transID}
+            {tran.machine_id}
           </li>
           <li style={this.props.myStyle.list_items}>
-            {tran.price}
+            {tran.doctor_id}
           </li>
           <li style={this.props.myStyle.list_items}>
-            {tran.sector}
+            {tran.hospital}
           </li>
           <li style={this.props.myStyle.list_items}>
-            {tran.price}
+            {tran.payment}
           </li>
         </div>
       );

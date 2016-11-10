@@ -31,11 +31,12 @@ class Application extends Component {
       const spot = max => Math.floor(Math.random() * max);
       setInterval(() => {
         const newTrans = {
-          buyer: names[spot(names.length)],
-          seller: names[spot(names.length)],
-          transID: `0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-          price: `${spot(3000000)} AMD`,
-          sector: sectors[spot(sectors.length)]
+          patient_id: names[spot(names.length)],
+          bed_id: names[spot(names.length)],
+          machine_id: `0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          doctor_id: `${spot(3000000)} AMD`,
+          hospital: sectors[spot(sectors.length)],
+          payment: sectors[spot(sectors.length)],
         };
         this.setState({...this.state,
           trans:[...this.state.trans, newTrans],
@@ -57,7 +58,7 @@ class Application extends Component {
       list_items:{
         listStyleType: 'none',
         fontFamily: 'sans-serif',
-        fontSize: '18px',
+        fontSize: '15px',
         color: 'white',
         margin: '0.5em auto',
         padding: '.50rem',
@@ -69,7 +70,7 @@ class Application extends Component {
       container:{
         marginLeft: '2vw',
         opacity: '.8',
-        width:'54%',
+        width:'45%',
         fontSize: '20px',
         marginTop:'15vh',
         alignSelf: 'flex-start',
@@ -94,10 +95,11 @@ class Application extends Component {
       styleFirst: {
         backgroundColor: '#6E6D74',
         display: 'flex',
-        width: '54%',
+        width: '45%',
         position: 'absolute',
         borderRadius: '5px',
         height: '3rem',
+        fontWeight: 'Bold',
       },
     };
     return (
