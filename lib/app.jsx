@@ -96,7 +96,7 @@ class Application extends Component {
         backgroundColor: '#6E6D74',
         display: 'flex',
         width: '45%',
-        position: 'absolute',
+        position: 'fixed',
         borderRadius: '5px',
         height: '3rem',
         fontWeight: 'Bold',
