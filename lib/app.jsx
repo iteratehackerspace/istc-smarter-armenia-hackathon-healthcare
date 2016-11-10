@@ -100,13 +100,24 @@ class Application extends Component {
         fontWeight: 'Bold',
       },
     };
+    const navbar = {
+
+    };
     return (
       <div style={bodyStyle}>
+        <style>{
+          `
+          
+        `
+        }
+
+        </style>
+        
         <video playsInline autoPlay muted loop style={vidStyle}>
           <source src={'/Ground-Zero.webm'} type={'video/webm'}/>
         </video>
         <RealTimeLedger transactions={this.state.trans}
-			       myStyle={ledgerStyle}/>
+			       myStyle={ledgerStyle} />
         <RealTimeMap />
         <Footer />
       </div>
