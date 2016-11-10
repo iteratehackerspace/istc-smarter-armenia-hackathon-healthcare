@@ -13,16 +13,16 @@ class Application extends Component {
 
   componentDidMount() {
     const patient = 'patient';
-    const hospitals = ['Shengavit Medical Center', 'Hanrapetakan Hospital',
-                      'SlavMed Medical Center', 'Izmirlian Medical Center'];
+    const hospitals = ['Shengavit', 'Hanrapetakan',
+                      'SlavMed', 'Izmirlian'];
     const spot = max => Math.floor(Math.random() * max);
 
       setInterval(() => {
         const newTrans = {
-          patient_id: `Patient 0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-          bed_id: `Bed 2g${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-          machine_id: `Machine 3y${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-          doctor_id: `Doctor 8z${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          patient_id: `0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          bed_id: `2g${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          machine_id: `3y${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          doctor_id: `8z${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
           hospital: hospitals[spot(hospitals.length)],
           payment: `${Math.floor(Math.random() * 100000)} AMD`,
         };
