@@ -1,14 +1,9 @@
 import React from 'react';
 import RealTimeLedger from './realTimeLedger';
+import RealTimeMap from './realTimeMap';
 import { render } from 'react-dom';
 
 const { Component } = React;
-
-let status = [
-  { room1: Array(16).fill(false),
-    room2: Array(16).fill(false),
-    machines: Array(16).fill(false), },
-]
 
 class Application extends Component {
   constructor() {
@@ -37,7 +32,6 @@ class Application extends Component {
         });
       }, 2 * 1000);
   }
-
   render() {
     const vidStyle= {
     position: 'fixed',
@@ -45,7 +39,15 @@ class Application extends Component {
     minHeight: '100%',
     zIndex: '-100',
     backgroundSize: 'cover'
-  };
+    };
+    const bodyStyle = {
+      height:'100vh',
+      width:'100vw',
+      display:'flex',
+      justifyContent:'space-between',
+      display: 'flex',
+      flexWrap: 'wrap'
+    };
     const ledgerStyle= {
 
       list_items:{
@@ -97,12 +99,13 @@ class Application extends Component {
       },
     };
     return (
-      <div>
+      <div style={bodyStyle}>
         <video playsInline autoPlay muted loop style={vidStyle}>
           <source src={'/Ground-Zero.webm'} type={'video/webm'}/>
         </video>
         <RealTimeLedger transactions={this.state.trans}
-			myStyle={ledgerStyle}/>
+			       myStyle={ledgerStyle}/>
+        <RealTimeMap />
       </div>
     );
   }
