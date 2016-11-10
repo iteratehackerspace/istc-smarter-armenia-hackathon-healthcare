@@ -50,9 +50,9 @@ class RealTimeMap extends Component {
         alignSelf: 'flex-start',
         backgroundColor: 'white',
         height:'60vh',
-        borderRadius: '20px',
+        borderRadius: '5px',
         display: 'inline-block',
-            background: 'linear-gradient(to right,rgb(239, 232, 185), #181a33)',
+            background: 'linear-gradient(to right, #6E6D74, #607899)',
     };
 
     const parent = {
@@ -114,7 +114,7 @@ class StatusBar extends Component {
       heigth: '2%',
       width: 'calc(100%/3)',
       cursor: 'pointer',
-      borderRadius: '20px',
+      borderRadius: '5px',
       paddingLeft: '50px',
       paddingTop: '5px',
       paddingBottom: '5px',
@@ -130,7 +130,7 @@ class StatusBar extends Component {
       color: 'white',
       opacity: '.9',
       cursor: 'pointer',
-      borderRadius: '20px',
+      borderRadius: '5px',
       transition: 'all 1s',
       fontSize: '24px',
     };

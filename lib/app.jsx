@@ -73,11 +73,11 @@ class Application extends Component {
         alignSelf: 'flex-start',
         backgroundColor: 'white',
         height:'60vh',
-        borderRadius: '20px',
+        borderRadius: '5px',
         display: 'inline-block',
         overflowY: 'scroll',
         scrollSpeed: 'slow',
-        background: 'linear-gradient(to right, #6E6D74, #607899)',
+        background: 'linear-gradient',
         marginBottom: '0',
       },
       stylee: {
