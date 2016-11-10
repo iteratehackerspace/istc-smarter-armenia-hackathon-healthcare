@@ -63,7 +63,7 @@ class Application extends Component {
         padding: '.50rem',
         wordWrap: 'break-word',
         transition: 'top 1s',
-        width: '20%',
+        width: '140%',
         textAlign: 'center',
       },
       container:{

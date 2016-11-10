@@ -35,6 +35,9 @@ class RealTimeLedger extends Component {
           <li style={this.props.myStyle.list_items}>
             {tran.sector}
           </li>
+          <li style={this.props.myStyle.list_items}>
+            {tran.price}
+          </li>
         </div>
       );
     });
@@ -49,13 +52,16 @@ class RealTimeLedger extends Component {
             Bed ID
           </li>
           <li style={this.props.myStyle.list_items}>
-	           Machine ID
+	          Machine ID
           </li>
           <li style={this.props.myStyle.list_items}>
             Doctor ID
           </li>
           <li style={this.props.myStyle.list_items}>
             Hospital
+          </li>
+          <li style={this.props.myStyle.list_items}>
+            Payment
           </li>
         </div>
         {TransactionFullList}
