@@ -119,7 +119,7 @@ class StatusBar extends Component {
       paddingTop: '5px',
       paddingBottom: '5px',
       transition: 'all 1s',
-      fontSize: '30px',
+      fontSize: '23px',
     };
     const activeStyles = {
       display: 'inline-block',
@@ -132,7 +132,7 @@ class StatusBar extends Component {
       cursor: 'pointer',
       borderRadius: '20px',
       transition: 'all 1s',
-      fontSize: '30px',
+      fontSize: '24px',
     };
     return (
       <div>
