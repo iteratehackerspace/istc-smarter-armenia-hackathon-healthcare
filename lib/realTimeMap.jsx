@@ -59,7 +59,7 @@ class RealTimeMap extends Component {
       justifyContent:'space-between',
       display: 'flex',
       flexWrap: 'wrap',
-      border: '1px solid black'
+      borderTop: '1px solid black'
     }
     let updatedList = [];
 
