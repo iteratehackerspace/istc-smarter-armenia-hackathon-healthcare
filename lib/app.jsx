@@ -45,7 +45,15 @@ class Application extends Component {
   }
 
   render() {
+    const vidStyle= {
+    position: 'fixed',
+    minWidth: '100%',
+    minHeight: '100%',
+    zIndex: '-100',
+    backgroundSize: 'cover'
+  };
     const ledgerStyle= {
+
       list_items:{
         listStyleType: 'none',
         fontFamily: 'sans-serif',
@@ -94,6 +102,9 @@ class Application extends Component {
     };
     return (
       <div>
+        <video playsInline autoPlay muted loop style={vidStyle}>
+          <source src={'/Ground-Zero.webm'} type={'video/webm'}/>
+        </video>
         <RealTimeLedger transactions={this.state.trans}
 			myStyle={ledgerStyle}/>
       </div>
