@@ -31,14 +31,14 @@ class RealTimeMap extends Component {
     const usedStyle = {
       height: 'calc(100%/6)',
       width: 'calc(100%/6)',
-      color: 'red',
+      color: '#460e04',
       margin: '20px',
     };
 
     const freeStyle = {
       height: 'calc(100%/6)',
       width: 'calc(100%/6)',
-      color: 'green',
+      color: 'rgb(20, 72, 35)',
       margin: '20px',
     };
 
@@ -49,10 +49,10 @@ class RealTimeMap extends Component {
       minWidth:'40vw',
       height:'80vh',
       width: '40vw',
-      backgroundColor:'#d2b04c',
+      backgroundColor:'black',
       borderRadius: '20px',
       paddingLeft: '2vw',
-      background: 'linear-gradient(to right, #c7bfec, #73baaf)',
+      background: 'linear-gradient(to right,rgb(224, 251, 159), #181a33)',
     };
 
     const parent = {
@@ -67,7 +67,7 @@ class RealTimeMap extends Component {
       updatedList = hospitalStatus[0].rooms[this.state.currentID-1].map((currBed, idx) => {
         currBed.usedStatus = (Math.random() > 0.5) ? true : false;
         return (
-          <div style={currBed.usedStatus ? usedStyle : freeStyle} key={idx}>{currBed.usedStatus ? "Used" : "Free"}</div>
+          <div style={currBed.usedStatus ? usedStyle : freeStyle} key={idx}>{currBed.usedStatus ? "Busy" : "Free"}</div>
         );
       });
     }
@@ -126,7 +126,7 @@ class StatusBar extends Component {
       paddingLeft: '20px',
       heigth: '2%',
       width: 'calc(100%/3)',
-      backgroundColor: '#a965a1',
+      backgroundColor: 'rgb(52, 46, 140)',
       color: 'white',
       opacity: '.9',
       cursor: 'pointer',
