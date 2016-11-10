@@ -57,6 +57,7 @@ class RealTimeLedger extends Component {
           <li style={this.props.myStyle.list_items}>
             Hospital
           </li>
+          </li>
         </div>
         {TransactionFullList}
       </div>
