@@ -16,7 +16,7 @@ class Application extends Component {
   componentDidMount() {
     const patient = 'patient';
     const hospitals = ['Shengavit', 'Hanrapetakan',
-                      'SlavMed', 'Izmirlian'];
+                      'SlavMed', 'Izmirlian', 'NorMed'];
     const spot = max => Math.floor(Math.random() * max);
 
       setInterval(() => {
@@ -82,7 +82,7 @@ class Application extends Component {
       },
       stylee: {
         display: 'flex',
-        background: 'linear-gradient(to right, #6E6D74, #607899)',
+        background: 'linear-gradient(to right, #738182, #5ea3a8)',
         scrollBehavior: 'smooth',
         transition: 'ease-in 2s',
         animationName: 'anim',
@@ -91,7 +91,7 @@ class Application extends Component {
         width: '100%',
       },
       styleFirst: {
-        backgroundColor: '#6E6D74',
+        backgroundColor: '#839493',
         display: 'flex',
         width: '45%',
         position: 'fixed',
@@ -119,7 +119,6 @@ class Application extends Component {
         <RealTimeLedger transactions={this.state.trans}
 			       myStyle={ledgerStyle} />
         <RealTimeMap />
-        <Footer />
       </div>
     );
   }
