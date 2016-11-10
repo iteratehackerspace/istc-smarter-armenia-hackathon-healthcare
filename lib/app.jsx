@@ -25,9 +25,9 @@ class Application extends Component {
       setInterval(() => {
         const newTrans = {
           patient_id: `Patient 0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-          bed_id: `Bed 0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-          machine_id: `Machine 0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-          doctor_id: `Doctor 0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          bed_id: `Bed 2g${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          machine_id: `Machine 3y${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+          doctor_id: `Doctor 8z${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
           hospital: hospitals[spot(hospitals.length)],
           payment: `${Math.floor(Math.random() * 100000)} AMD`,
         };
@@ -65,15 +65,16 @@ class Application extends Component {
         opacity: '.8',
         width:'45%',
         fontSize: '20px',
-        marginTop:'15vh',
+        marginTop:'30vh',
         alignSelf: 'flex-start',
         backgroundColor: 'white',
-        height:'80vh',
+        height:'60vh',
         borderRadius: '20px',
         display: 'inline-block',
         overflowY: 'scroll',
         scrollSpeed: 'slow',
         background: 'linear-gradient(to right, #6E6D74, #607899)',
+        marginBottom: '0',
       },
       stylee: {
         display: 'flex',
