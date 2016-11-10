@@ -9,7 +9,92 @@
    html { box-sizing: border-box; }
    *, *:before, *:after { box-sizing: inherit; }
    /*  Basic resets for modern browsers */
+
+.a {
+   background-color: purple;
+   background-size: cover;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   font-family:  'Lato', sans-serif;
+   color: #FFF;
+   font-weight: 400;
+}
+.b {
+   padding: 0;
+   margin-top: 0;
+   position: absolute;
+   left: 0;
+   right: 0;
+   font-size: 100px;
+   text-align: center;
+   perspective: 600px;
+}
+ .c {
+   width: 16.6666666%;
+   display: inline-block;
+   float: left;
+   animation-duration: 6s;
+   animation-iteration-count: 0.5;
+   animation-timing-function: ease-out;
+   opacity: 1;
+ }
+   .c:nth-child(1) {
+   animation-name: animf;
+   }
+   .c:nth-child(2) {
+   animation-name: animi;
+   }
+   .c:nth-child(3) {
+   animation-name: animn;
+   }
+   .c:nth-child(4) {
+   animation-name: animA;
+   }
+   .c:nth-child(5) {
+   animation-name: animr;
+   }
+   .c:nth-child(6) {
+   animation-name: animm;
+   }
+
+   @keyframes animf {
+ 0% , 90% { transform: translate3D( 240%,0,-400px ) rotateY( 85deg ); opacity: 0 }
+ 10%, 80% { transform: translate3D( 220%,0,0 ) rotateY( 40deg ); opacity: 1; }
+ 32%, 58% { transform: translate3D( 0,0,0 ) rotateY( 0deg ); }
+}
+@keyframes animi {
+ 15%, 75% { transform: translate3D( 120%,0, 0 ) rotateY( 90deg ); color: #999; opacity: 0 }
+ 32%, 58% { transform: translate3D( 0,0,0 ) rotateY( 0deg ); color: #FFF; opacity: 1 }
+}
+@keyframes animn {
+ 20%, 70% { transform: translate3D( 30%,0, 0 ) rotateY( 90deg ); color: #999; opacity: 0 }
+ 32%, 58% { transform: translate3D( 0,0,0 ) rotateY( 0deg ); color: #FFF; opacity: 1 }
+}
+@keyframes animA {
+ 20%, 70% { transform: translate3D( -30%,0, 0 ) rotateY( -90deg ); color: #999; opacity: 0 }
+ 32%, 58% { transform: translate3D( 0,0,0 ) rotateY( 0deg ); color: #FFF; opacity: 1 }
+}
+@keyframes animr {
+ 15%, 75% { transform: translate3D( -120%,0, 0 ) rotateY( -90deg ); color: #999; opacity: 0 }
+ 32%, 58% { transform: translate3D( 0,0,0 ) rotateY( 0deg ); color: #FFF; opacity: 1 }
+}
+@keyframes animm {
+ 0% , 90% { transform: translate3D( -240%,0,-400px ) rotateY( -85deg ); opacity: 0 }
+ 10%, 80% { transform: translate3D( -220%,0,0 ) rotateY( -40deg ); opacity: 1; }
+ 32%, 58% { transform: translate3D( 0,0,0 ) rotateY( 0deg ); opacity: 1;}
+}
   </style>
+  <div class="b">
+    <span class="c">f</span>
+    <span class="c">i</span>
+    <span class="c">n</span>
+    <span class="c">A</span>
+    <span class="c">r</span>
+    <span class="c">m</span>
+  </div>
   <div id="container"></div>
   <script src='bundle.js'></script>
 </body>
