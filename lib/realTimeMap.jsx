@@ -53,7 +53,7 @@ class RealTimeMap extends Component {
         height:'60vh',
         borderRadius: '5px',
         display: 'inline-block',
-            background: 'linear-gradient(to right, #6E6D74, #607899)',
+            background: 'linear-gradient(to left, #6E6D74, #5ea3a8)',
     };
 
     const parent = {
@@ -124,7 +124,7 @@ class StatusBar extends Component {
       paddingTop: '5px',
       paddingBottom: '5px',
       transition: 'all 1s',
-      fontSize: '23px',
+      fontSize: '20px'
     };
     const activeStyles = {
       display: 'inline-block',
@@ -138,6 +138,7 @@ class StatusBar extends Component {
       borderRadius: '5px',
       transition: 'all 1s',
       fontSize: '20px',
+      textAlign: 'center'
     };
     return (
       <div>
