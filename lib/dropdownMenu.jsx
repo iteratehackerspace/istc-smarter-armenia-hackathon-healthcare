@@ -12,10 +12,6 @@ class DropdownMenu extends Component {
   }
 
   render() {
-      const buttonStyle = {
-        backgroundColor: '#75bbb9',
-        color: 'white',
-      }
 
     return (
       <div style={{display: 'flex', justifyContent: 'flex-start'}}>

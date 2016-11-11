@@ -119,9 +119,13 @@ class StatusBar extends Component {
       height: '10%',
       display: 'block',
     }
+
+    const tabColor = {
+      backgroundColor: '#738182',
+    }
     return (
       <div style={containerStyle}>
-        <Nav bsStyle="pills" justified activeKey={this.state.active} onSelect={this.clickEvent}>
+        <Nav bsStyle="pills" style={tabColor} justified activeKey={this.state.active} onSelect={this.clickEvent}>
           <NavItem eventKey={1} className={'nav-item'}>Room 1</NavItem>
           <NavItem eventKey={2} className={'nav-item'}>Room 2</NavItem>
           <NavItem eventKey={3} className={'nav-item'}>Machines</NavItem>

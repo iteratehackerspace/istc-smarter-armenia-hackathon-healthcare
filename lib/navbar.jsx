@@ -14,8 +14,14 @@ class NavBar extends Component {
   }
 
   render() {
+
+    const navbar = {
+      opacity: '.8',
+      width: '100%'
+    }
+
     return (
-      <Navbar collapseOnSelect style={{width: '100%'}}>
+      <Navbar collapseOnSelect style={navbar}>
           <Navbar.Header>
             <Navbar.Brand>
               <a href="#"><i className={"fa fa-heartbeat"} aria-hidden="true"></i></a>
@@ -33,7 +39,7 @@ class NavBar extends Component {
                 <MenuItem eventKey={3.4}>Izmirlian</MenuItem>
                 <MenuItem eventKey={3.5}>NorMed</MenuItem>
               </NavDropdown>
-              <NavItem eventKey={4} href="https://iteratehackerspace.github.io/">About Us</NavItem>
+              <NavItem eventKey={4} href="https://iteratehackerspace.github.io/" target="_blank">About Us</NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
