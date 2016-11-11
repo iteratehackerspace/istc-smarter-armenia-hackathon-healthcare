@@ -1,5 +1,7 @@
 import React from 'react';
 import DropdownMenu from './dropdownMenu';
+import {Nav} from 'react-bootstrap';
+import {NavItem} from 'react-bootstrap';
 
 const { Component } = React;
 
@@ -47,7 +49,7 @@ class RealTimeMap extends Component {
       marginRight: '2vw',
       opacity: '.8',
       width:'37%',  fontSize: '15px',
-        marginTop:'30vh',
+        marginTop:'10vh',
         alignSelf: 'flex-start',
         backgroundColor: 'white',
         height:'60vh',
@@ -86,7 +88,7 @@ class RealTimeMap extends Component {
     }
   return (
       <div style={graphStyle}>
-        <StatusBar changeImage={(number) => {
+        <StatusBar changeElm={(number) => {
             this.setState({ ...this.state, currentID: number });
           }}
         />
@@ -103,60 +105,27 @@ class StatusBar extends Component {
   constructor() {
     super();
     this.clickEvent=this.clickEvent.bind(this);
-    this.state={active: [true, false, false]}
+    this.state={active: 1}
   }
 
   clickEvent(e) {
-    this.props.changeImage(e.currentTarget.id);
-    let newState = [false, false, false];
-    newState[e.currentTarget.id - 1] = true;
-    this.setState({...this.state, active: newState});
+    const currentID = e;
+    this.props.changeElm(currentID);
+    this.setState({...this.state, active: currentID});
   }
 
   render() {
-    const styles = {
-      display: 'inline-block',
-      heigth: '2%',
-      width: 'calc(100%/3)',
-      cursor: 'pointer',
-      borderRadius: '5px',
-      paddingLeft: '30px',
-      paddingTop: '5px',
-      paddingBottom: '5px',
-      transition: 'all 1s',
-      fontSize: '20px'
-    };
-    const activeStyles = {
-      display: 'inline-block',
-      paddingLeft: '15px',
-      heigth: '2%',
-      width: 'calc(100%/3)',
-      backgroundColor: '#75bbb9',
-      color: 'white',
-      opacity: '.9',
-      cursor: 'pointer',
-      borderRadius: '5px',
-      transition: 'all 1s',
-      fontSize: '20px',
-      textAlign: 'center'
-    };
+    const containerStyle = {
+      height: '10%',
+      display: 'block',
+    }
     return (
-      <div>
-        <div
-          onClick={this.clickEvent}
-          style={this.state.active[0] ? activeStyles : styles}
-          id={1}>First Floor
-        </div>
-        <div
-          onClick={this.clickEvent}
-          style={this.state.active[1] ? activeStyles : styles}
-          id={2}>Second Floor
-        </div>
-        <div
-          onClick={this.clickEvent}
-          style={this.state.active[2] ? activeStyles : styles}
-          id={3}>Machines
-        </div>
+      <div style={containerStyle}>
+        <Nav bsStyle="pills" justified activeKey={this.state.active} onSelect={this.clickEvent}>
+          <NavItem eventKey={1} className={'nav-item'}>Room 1</NavItem>
+          <NavItem eventKey={2} className={'nav-item'}>Room 2</NavItem>
+          <NavItem eventKey={3} className={'nav-item'}>Machines</NavItem>
+        </Nav>
       </div>
     );
   }
