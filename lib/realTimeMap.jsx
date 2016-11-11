@@ -1,5 +1,5 @@
 import React from 'react';
-import DropdownMenu from './Menus';
+import DropdownMenu from './dropdownMenu';
 import {Nav} from 'react-bootstrap';
 import {NavItem} from 'react-bootstrap';
 
@@ -88,7 +88,7 @@ class RealTimeMap extends Component {
         <StatusBar changeElm={(number) => {
             this.setState({ ...this.state, currentID: number });
           }}
-        />  
+        />
         <DropdownMenu />
         <div style={parent}>
           {updatedList}
