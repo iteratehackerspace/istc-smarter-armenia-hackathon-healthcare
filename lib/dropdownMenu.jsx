@@ -1,7 +1,5 @@
 import React from 'react';
-import { ButtonToolbar } from 'react-bootstrap';
-import { DropdownButton } from 'react-bootstrap';
-import { MenuItem } from 'react-bootstrap';
+import { ButtonToolbar, DropdownButton, MenuItem } from 'react-bootstrap';
 
 const {Component} = React;
 
