@@ -18,11 +18,11 @@ class DropdownMenu extends Component {
       <div style={{display: 'flex', justifyContent: 'flex-start'}}>
         <ButtonToolbar>
         <DropdownButton bsStyle={'primary'} title="Hospitals" id="dropdown-size-medium">
-          <MenuItem eventKey="1">'Shengavit'</MenuItem>
-          <MenuItem eventKey="2">'Hanrapetakan'</MenuItem>
-          <MenuItem eventKey="3">'SlavMed'</MenuItem>
-          <MenuItem eventKey="4">'Izmirlian'</MenuItem>
-          <MenuItem eventKey="5">'NorMed'</MenuItem>
+          <MenuItem eventKey="1">Shengavit</MenuItem>
+          <MenuItem eventKey="2">Hanrapetakan</MenuItem>
+          <MenuItem eventKey="3">SlavMed</MenuItem>
+          <MenuItem eventKey="4">Izmirlian</MenuItem>
+          <MenuItem eventKey="5">NorMed</MenuItem>
         </DropdownButton>
       </ButtonToolbar>
     </div>
