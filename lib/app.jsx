@@ -87,7 +87,6 @@ class Application extends Component {
         transition: 'ease-in 2s',
         animationName: 'anim',
         textAlign: 'center',
-        height: '3rem',
         width: '100%',
       },
       styleFirst: {
@@ -96,7 +95,6 @@ class Application extends Component {
         width: '45%',
         position: 'fixed',
         borderRadius: '5px',
-        height: '3rem',
         fontWeight: 'Bold',
       },
     };
@@ -105,14 +103,6 @@ class Application extends Component {
     };
     return (
       <div style={bodyStyle}>
-        <style>{
-          `
-          
-        `
-        }
-
-        </style>
-        
         <video playsInline autoPlay muted loop style={vidStyle}>
           <source src={'/Ground-Zero.webm'} type={'video/webm'}/>
         </video>
