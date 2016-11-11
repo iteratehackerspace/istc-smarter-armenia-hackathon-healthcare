@@ -18,7 +18,7 @@ class NavBar extends Component {
       <Navbar collapseOnSelect style={{width: '100%'}}>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">Parallax</a>
+              <a href="#"><i className={"fa fa-heartbeat"} aria-hidden="true"></i></a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
