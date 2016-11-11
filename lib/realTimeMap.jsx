@@ -53,7 +53,7 @@ class RealTimeMap extends Component {
         height:'60vh',
         borderRadius: '5px',
         display: 'inline-block',
-            background: 'linear-gradient(to right, #6E6D74, #607899)',
+            background: 'linear-gradient(to left, #6E6D74, #5ea3a8)',
     };
 
     const parent = {
@@ -64,11 +64,14 @@ class RealTimeMap extends Component {
     }
     let updatedList = [];
 
+
+
     if(this.state.currentID < 3) {
+      let bedIcon = './bedicon32x32.png'
       updatedList = hospitalStatus[0].rooms[this.state.currentID-1].map((currBed, idx) => {
         currBed.usedStatus = (Math.random() > 0.5) ? true : false;
         return (
-          <div style={currBed.usedStatus ? usedStyle : freeStyle} key={idx}>{currBed.usedStatus ? "Busy" : "Free"}</div>
+          <div style={currBed.usedStatus ? usedStyle : freeStyle} key={idx}>{currBed.usedStatus ? "Busy" : "Free"}<img src={bedIcon}/></div>
         );
       });
     }
@@ -77,7 +80,7 @@ class RealTimeMap extends Component {
       updatedList = hospitalStatus[0].machines.map((currMachine, idx) => {
         currMachine.usedStatus = (Math.random() > 0.5) ? true : false;
         return (
-          <div style={currMachine.usedStatus ? usedStyle : freeStyle} key={idx}>{currMachine.usedStatus ? "Used" : "Free"}</div>
+          <div style={currMachine.usedStatus ? usedStyle : freeStyle} key={idx}>{currMachine.usedStatus ? "Used" : "Free"}<img src='./lifeline.png'/></div>
         );
       });
     }
@@ -117,36 +120,37 @@ class StatusBar extends Component {
       width: 'calc(100%/3)',
       cursor: 'pointer',
       borderRadius: '5px',
-      paddingLeft: '50px',
+      paddingLeft: '30px',
       paddingTop: '5px',
       paddingBottom: '5px',
       transition: 'all 1s',
-      fontSize: '23px',
+      fontSize: '20px'
     };
     const activeStyles = {
       display: 'inline-block',
-      paddingLeft: '20px',
+      paddingLeft: '15px',
       heigth: '2%',
       width: 'calc(100%/3)',
-      backgroundColor: 'rgb(52, 46, 140)',
+      backgroundColor: '#75bbb9',
       color: 'white',
       opacity: '.9',
       cursor: 'pointer',
       borderRadius: '5px',
       transition: 'all 1s',
-      fontSize: '24px',
+      fontSize: '20px',
+      textAlign: 'center'
     };
     return (
       <div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[0] ? activeStyles : styles}
-          id={1}>Room1
+          id={1}>First Floor
         </div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[1] ? activeStyles : styles}
-          id={2}>Room2
+          id={2}>Second Floor
         </div>
         <div
           onClick={this.clickEvent}
