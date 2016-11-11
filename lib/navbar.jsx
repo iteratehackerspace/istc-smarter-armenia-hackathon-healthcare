@@ -18,7 +18,7 @@ class NavBar extends Component {
       <Navbar collapseOnSelect style={{width: '100%'}}>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">React-Bootstrap</a>
+              <a href="#">Parallax</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
@@ -33,7 +33,7 @@ class NavBar extends Component {
                 <MenuItem eventKey={3.4}>Izmirlian</MenuItem>
                 <MenuItem eventKey={3.5}>NorMed</MenuItem>
               </NavDropdown>
-              <NavItem eventKey={4} href="#">About Us</NavItem>
+              <NavItem eventKey={4} href="https://iteratehackerspace.github.io/">About Us</NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
