@@ -1,4 +1,5 @@
 import React from 'react';
+import DropdownMenu from './dropdownMenu';
 
 const { Component } = React;
 
@@ -86,6 +87,7 @@ class RealTimeMap extends Component {
             this.setState({ ...this.state, currentID: number });
           }}
         />
+        <DropdownMenu />
         <div style={parent}>
           {updatedList}
         </div>

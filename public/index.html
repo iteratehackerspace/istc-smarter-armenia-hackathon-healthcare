@@ -1,58 +1,64 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<body>
-  <style>
-   /*  Basic resets for modern browsers */
-   * {
-     margin:0; padding:0; font-family: 'poppins', 'sans-serif';
-   }
-   html { box-sizing: border-box; }
-   *, *:before, *:after { box-sizing: inherit; }
-   /*  Basic resets for modern browsers */
-   
-   ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #6e6d74;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        opacity: .9;
-      }
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <style>
+     /*  Basic resets for modern browsers */
+     * {
+       margin:0; padding:0; font-family: 'poppins', 'sans-serif';
+     }
+     html { box-sizing: border-box; }
+     *, *:before, *:after { box-sizing: inherit; }
+     /*  Basic resets for modern browsers */
 
-   li {
-        float: left;
-        width: 25%;
-      }
-
-   li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+     #menu {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #6e6d74;
+          position: fixed;
+          top: 0;
+          width: 100%;
+          opacity: .9;
         }
 
-      li a:hover:not(.active) {
-        background-color: #75bbb9;
+     #menu li {
+          float: left;
+          width: 25%;
         }
 
-      .active {
-        background-color: #75bbb9;
+     #menu li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
           }
 
-  </style>
-  
-  <ul>
-          <li><a href="#">Ledger</a></li>
-          <li><a href="#">Map</a></li>
-          <li><a href="#">Hospitals</a></li>
-          <li><a href="https://iteratehackerspace.github.io/">About Us</a></li>
-  </ul>
+      #menu li a:hover:not(.active) {
+          background-color: #75bbb9;
+          }
 
-  <div id="container"></div>
+        .active {
+          background-color: #75bbb9;
+          }
 
-  <script src='bundle.js'></script>
-</body>
+    </style>
+
+    <ul id="menu">
+            <li><a href="#">Ledger</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Hospitals</a></li>
+            <li><a href="https://iteratehackerspace.github.io/">About Us</a></li>
+    </ul>
+
+    <div id="container"></div>
+
+    <script src='bundle.js'></script>
+  </body>
+</html>
