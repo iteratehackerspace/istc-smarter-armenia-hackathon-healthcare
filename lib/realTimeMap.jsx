@@ -1,15 +1,14 @@
 import React from 'react';
 import DropdownMenu from './dropdownMenu';
-import {Nav} from 'react-bootstrap';
-import {NavItem} from 'react-bootstrap';
+import {Nav, NavItem} from 'react-bootstrap';
 
 const { Component } = React;
 
 let hospitalStatus = [
   {
     hospitalID: 0,
-    rooms: [Array(16).fill({id: 0, usedStatus: true}), Array(16).fill({id: 0, usedStatus: false})],
-    machines: Array(16).fill({id: 0, usedStatus: false}),
+    rooms: [Array(28).fill({id: 0, usedStatus: true}), Array(28).fill({id: 0, usedStatus: false})],
+    machines: Array(28).fill({id: 0, usedStatus: false}),
   },
 ]
 
@@ -69,11 +68,14 @@ class RealTimeMap extends Component {
 
 
     if(this.state.currentID < 3) {
-      let bedIcon = './bedicon32x32.png'
+      let bedIcon = './bedicon32x32.png';
+      let emptybedicon = './emptybedicon.png'
       updatedList = hospitalStatus[0].rooms[this.state.currentID-1].map((currBed, idx) => {
         currBed.usedStatus = (Math.random() > 0.5) ? true : false;
         return (
-          <div style={currBed.usedStatus ? usedStyle : freeStyle} key={idx}>{currBed.usedStatus ? "Busy" : "Free"}<img src={bedIcon}/></div>
+          <div style={currBed.usedStatus ? usedStyle : freeStyle} key={idx}>
+            {currBed.usedStatus ? <div>Busy <img src={bedIcon} className={"icon"}/></div> : <div>Free <img src={emptybedicon} className={"icon"}/></div>}
+          </div>
         );
       });
     }
@@ -82,7 +84,9 @@ class RealTimeMap extends Component {
       updatedList = hospitalStatus[0].machines.map((currMachine, idx) => {
         currMachine.usedStatus = (Math.random() > 0.5) ? true : false;
         return (
-          <div style={currMachine.usedStatus ? usedStyle : freeStyle} key={idx}>{currMachine.usedStatus ? "Used" : "Free"}<img src='./lifeline.png'/></div>
+          <div style={currMachine.usedStatus ? usedStyle : freeStyle} key={idx}>
+            {currMachine.usedStatus ? <div>Used <img src='./lifeline.png' className={"icon"} /></div> : <div>Free <img src='./free.png' className={"icon"}/></div>}
+          </div>
         );
       });
     }
@@ -116,7 +120,7 @@ class StatusBar extends Component {
 
   render() {
     const containerStyle = {
-      height: '10%',
+      height: '8%',
       display: 'block',
     }
 
