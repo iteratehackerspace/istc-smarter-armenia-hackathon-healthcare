@@ -49,7 +49,7 @@ class RealTimeMap extends Component {
       marginRight: '2vw',
       opacity: '.8',
       width:'37%',  fontSize: '15px',
-        marginTop:'30vh',
+        marginTop:'10vh',
         alignSelf: 'flex-start',
         backgroundColor: 'white',
         height:'60vh',
@@ -118,10 +118,10 @@ class StatusBar extends Component {
     }
     return (
       <div style={containerStyle}>
-        <Nav bsStyle="pills" activeKey={this.state.active} onSelect={this.clickEvent}>
-          <NavItem eventKey={1}>NavItem1 content</NavItem>
-          <NavItem eventKey={2}>NavItem2 content</NavItem>
-          <NavItem eventKey={3}>NavItem3 content</NavItem>
+        <Nav bsStyle="pills" justified activeKey={this.state.active} onSelect={this.clickEvent}>
+          <NavItem eventKey={1} className={'nav-item'}>Room 1</NavItem>
+          <NavItem eventKey={2} className={'nav-item'}>Room 2</NavItem>
+          <NavItem eventKey={3} className={'nav-item'}>Machines</NavItem>
         </Nav>
       </div>
     );
