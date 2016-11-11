@@ -20,12 +20,14 @@ class DropdownMenu extends Component {
     return (
       <div style={{display: 'flex', justifyContent: 'flex-start'}}>
         <ButtonToolbar>
-        <DropdownButton style={buttonStyle} bsStyle={buttonStyle} title="Hospitals" id="dropdown-size-medium">
-          <MenuItem eventKey="1">Shengavit</MenuItem>
-          <MenuItem eventKey="2">Hanrapetakan</MenuItem>
-          <MenuItem eventKey="3">SlavMed</MenuItem>
-          <MenuItem eventKey="4">Izmirlian</MenuItem>
-          <MenuItem eventKey="5">NorMed</MenuItem>
+
+        <DropdownButton bsStyle={'primary'} title="Hospitals" id="dropdown-size-medium">
+          <MenuItem eventKey="1"><img src='./doctorFav.ico' />Shengavit</MenuItem>
+          <MenuItem eventKey="2"><img src='./doctorFav.ico' />Hanrapetakan</MenuItem>
+          <MenuItem eventKey="3"><img src='./doctorFav.ico' />SlavMed</MenuItem>
+          <MenuItem eventKey="4"><img src='./doctorFav.ico' />Izmirlian</MenuItem>
+          <MenuItem eventKey="5"><img src='./doctorFav.ico' />NorMed</MenuItem>
+
         </DropdownButton>
       </ButtonToolbar>
     </div>

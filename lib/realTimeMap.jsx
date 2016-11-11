@@ -64,11 +64,14 @@ class RealTimeMap extends Component {
     }
     let updatedList = [];
 
+
+
     if(this.state.currentID < 3) {
+      let bedIcon = './bedicon32x32.png'
       updatedList = hospitalStatus[0].rooms[this.state.currentID-1].map((currBed, idx) => {
         currBed.usedStatus = (Math.random() > 0.5) ? true : false;
         return (
-          <div style={currBed.usedStatus ? usedStyle : freeStyle} key={idx}>{currBed.usedStatus ? "Busy" : "Free"}</div>
+          <div style={currBed.usedStatus ? usedStyle : freeStyle} key={idx}>{currBed.usedStatus ? "Busy" : "Free"}<img src={bedIcon}/></div>
         );
       });
     }
@@ -77,7 +80,7 @@ class RealTimeMap extends Component {
       updatedList = hospitalStatus[0].machines.map((currMachine, idx) => {
         currMachine.usedStatus = (Math.random() > 0.5) ? true : false;
         return (
-          <div style={currMachine.usedStatus ? usedStyle : freeStyle} key={idx}>{currMachine.usedStatus ? "Used" : "Free"}</div>
+          <div style={currMachine.usedStatus ? usedStyle : freeStyle} key={idx}>{currMachine.usedStatus ? "Used" : "Free"}<img src='./lifeline.png'/></div>
         );
       });
     }
@@ -117,7 +120,7 @@ class StatusBar extends Component {
       width: 'calc(100%/3)',
       cursor: 'pointer',
       borderRadius: '5px',
-      paddingLeft: '50px',
+      paddingLeft: '30px',
       paddingTop: '5px',
       paddingBottom: '5px',
       transition: 'all 1s',
@@ -125,7 +128,7 @@ class StatusBar extends Component {
     };
     const activeStyles = {
       display: 'inline-block',
-      paddingLeft: '20px',
+      paddingLeft: '15px',
       heigth: '2%',
       width: 'calc(100%/3)',
       backgroundColor: '#75bbb9',
@@ -134,19 +137,19 @@ class StatusBar extends Component {
       cursor: 'pointer',
       borderRadius: '5px',
       transition: 'all 1s',
-      fontSize: '24px',
+      fontSize: '20px',
     };
     return (
       <div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[0] ? activeStyles : styles}
-          id={1}>Room1
+          id={1}>First Floor
         </div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[1] ? activeStyles : styles}
-          id={2}>Room2
+          id={2}>Second Floor
         </div>
         <div
           onClick={this.clickEvent}
