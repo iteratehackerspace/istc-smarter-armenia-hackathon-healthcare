@@ -7,8 +7,8 @@ const { Component } = React;
 let hospitalStatus = [
   {
     hospitalID: 0,
-    rooms: [Array(16).fill({id: 0, usedStatus: true}), Array(16).fill({id: 0, usedStatus: false})],
-    machines: Array(16).fill({id: 0, usedStatus: false}),
+    rooms: [Array(28).fill({id: 0, usedStatus: true}), Array(28).fill({id: 0, usedStatus: false})],
+    machines: Array(28).fill({id: 0, usedStatus: false}),
   },
 ]
 
@@ -120,7 +120,7 @@ class StatusBar extends Component {
 
   render() {
     const containerStyle = {
-      height: '10%',
+      height: '8%',
       display: 'block',
     }
 
