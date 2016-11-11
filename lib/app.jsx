@@ -1,6 +1,7 @@
 import React from 'react';
 import RealTimeLedger from './realTimeLedger';
 import RealTimeMap from './realTimeMap';
+import NavBar from './navbar';
 
 import { render } from 'react-dom';
 
@@ -71,7 +72,7 @@ class Application extends Component {
         opacity: '.8',
         width:'45%',
         fontSize: '20px',
-        marginTop:'30vh',
+        marginTop:'10vh',
         alignSelf: 'flex-start',
         backgroundColor: 'white',
         height:'60vh',
@@ -103,6 +104,7 @@ class Application extends Component {
 
     return (
       <div style={bodyStyle}>
+        <NavBar />
         <video playsInline autoPlay muted loop style={vidStyle}>
           <source src={'/Ground-Zero.webm'} type={'video/webm'}/>
         </video>
