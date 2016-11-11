@@ -1,7 +1,6 @@
 import React from 'react';
 import RealTimeLedger from './realTimeLedger';
 import RealTimeMap from './realTimeMap';
-import Footer from './footer';
 
 import { render } from 'react-dom';
 
@@ -35,6 +34,7 @@ class Application extends Component {
       }, 2 * 1000);
   }
   render() {
+
     const vidStyle= {
     position: 'fixed',
     minWidth: '100%',
@@ -42,6 +42,7 @@ class Application extends Component {
     zIndex: '-100',
     backgroundSize: 'cover'
     };
+
     const bodyStyle = {
       height:'100vh',
       width:'100vw',
@@ -50,6 +51,7 @@ class Application extends Component {
       display: 'flex',
       flexWrap: 'wrap'
     };
+
     const ledgerStyle= {
 
       list_items:{
@@ -98,9 +100,7 @@ class Application extends Component {
         fontWeight: 'Bold',
       },
     };
-    const navbar = {
 
-    };
     return (
       <div style={bodyStyle}>
         <video playsInline autoPlay muted loop style={vidStyle}>

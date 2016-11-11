@@ -128,7 +128,7 @@ class StatusBar extends Component {
       paddingLeft: '20px',
       heigth: '2%',
       width: 'calc(100%/3)',
-      backgroundColor: 'rgb(52, 46, 140)',
+      backgroundColor: '#75bbb9',
       color: 'white',
       opacity: '.9',
       cursor: 'pointer',

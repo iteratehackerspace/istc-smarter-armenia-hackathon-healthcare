@@ -12,12 +12,15 @@ class DropdownMenu extends Component {
   }
 
   render() {
-
+      const buttonStyle = {
+        backgroundColor: '#75bbb9',
+        color: 'white',
+      }
 
     return (
       <div style={{display: 'flex', justifyContent: 'flex-start'}}>
         <ButtonToolbar>
-        <DropdownButton bsStyle={'primary'} title="Hospitals" id="dropdown-size-medium">
+        <DropdownButton style={buttonStyle} bsStyle={buttonStyle} title="Hospitals" id="dropdown-size-medium">
           <MenuItem eventKey="1">Shengavit</MenuItem>
           <MenuItem eventKey="2">Hanrapetakan</MenuItem>
           <MenuItem eventKey="3">SlavMed</MenuItem>
